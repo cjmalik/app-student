@@ -1,0 +1,7 @@
+ada\malik\novruzov\domain\Student.class
+ada\malik\novruzov\controllers\CourseController.class
+ada\malik\novruzov\repositories\StudentRepository.class
+ada\malik\novruzov\AdminStudent.class
+ada\malik\novruzov\repositories\CourseRepository.class
+ada\malik\novruzov\domain\Course.class
+ada\malik\novruzov\controllers\StudentController.class
