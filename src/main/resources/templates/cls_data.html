@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Data</title>
+    <style>
+    body{
+    background-color: #0775d3;
+    }
+    form {
+	margin-top: 10px;
+}
+
+label {
+	font-size: 16px;
+	width: 100px;
+	display: block;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	color:white;
+}
+
+input {
+	width: 250px;
+	border: 1px solid #666;
+	border-radius: 5px;
+	padding: 4px;
+	font-size: 16px;
+}
+table {
+	border-style:none;
+	width:15%;
+}
+
+tr:nth-child(even) {background: #0775d3}
+tr:nth-child(odd) {background: #0775d3}
+
+tr {
+	border-style:none;
+	text-align:left;
+}
+   .button {
+	border: 1px solid #666;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 120px;
+    padding: 8px 10px;
+    color: white;
+    margin-bottom: 15px;
+    background: #4CAF50;
+}
+   </style>
+</head>
+<body>
+
+<form action="/courses/save/" method="post">
+    <input type="hidden" name="CRN" th:value="${course.CRN}"><br>
+    <table>
+        <tbody>
+        <tr>
+            <td><label>Course name:</label></td>
+            <td><input type="text" name="courseName" pattern="[A-Za-z\s&-]{2,32}" th:value="${course.courseName}" required /></td>
+        </tr>
+
+        <tr>
+            <td><label>Course description:</label></td>
+            <td><input type="text" name="courseDesc" pattern="[A-Za-z0-9\s&-]{2,32}" th:value="${course.courseDesc}" required /><td>
+        </td>
+        <tr>
+            <td><label></label></td>
+            <td><input type="submit" value="Save" class="button" /></td>
+        </tr>
+
+        </tbody>
+    </table>
+</form>
+    <div style="clear: both;"></div>
+</body>
+</html>
